@@ -1,0 +1,6 @@
+C:\Users\sabri\source\repos\eğitim\for\bin\Debug\@for.exe
+C:\Users\sabri\source\repos\eğitim\for\bin\Debug\@for.pdb
+C:\Users\sabri\source\repos\eğitim\for\obj\Debug\for.csproj.AssemblyReference.cache
+C:\Users\sabri\source\repos\eğitim\for\obj\Debug\for.csproj.CoreCompileInputs.cache
+C:\Users\sabri\source\repos\eğitim\for\obj\Debug\@for.exe
+C:\Users\sabri\source\repos\eğitim\for\obj\Debug\@for.pdb

